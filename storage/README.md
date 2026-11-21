@@ -1,1 +1,1 @@
-## Implementasi sederhana operasi <i>file</i> dengan Flask dan Firebase Cloud Storage
+## Contoh pengelolaan file dengan Flask dan Firebase Cloud Storage

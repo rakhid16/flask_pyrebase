@@ -1,18 +1,21 @@
 <h1>Data Pendaftar</h1>
 
-<table style="width:45%;" border="1px">
+<table style="width: 45%;" border="1">
   <tr>
     <th>NPM</th>
     <th>Nama</th>
     <th>Jurusan</th>
     <th>Opsi</th>
   </tr>
-  {%for i, j in data.items()%}
+  {% for student_id, student in data.items() %}
   <tr>
-    <td>{{ i }}</td>
-    <td>{{ j['nama'] }}</td>
-    <td>{{ j['jurusan'] }}</td>
-    <td><a href="{{ url_for('edit', id = i) }}">Edit</a> | <a href="{{ url_for('hapus', id = i) }}">Hapus</a></td>
+    <td>{{ student_id }}</td>
+    <td>{{ student['nama'] }}</td>
+    <td>{{ student['jurusan'] }}</td>
+    <td>
+      <a href="{{ url_for('edit', student_id=student_id) }}">Edit</a> |
+      <a href="{{ url_for('hapus', student_id=student_id) }}">Hapus</a>
+    </td>
   </tr>
   {% endfor %}
 </table><br>
